@@ -164,7 +164,7 @@ def get_feature_set(df, y_target,pmax_lower_bound=0.05):
     
     Returns new dataframe using only the features of interest
     '''
-    data = df.dropna(axis=0, subset = [y_target], how='any').copy()  ### This isn't droping rows
+    data = df.dropna(axis=0, subset = [y_target], how='any').copy()  
     X = data.drop(y_target, axis = 1)
     y = data[y_target]
     
